@@ -5,11 +5,11 @@
 
 .box {
     background-color: white;
-    border: 5px solid black;
-    padding: -10px;
-    margin: 15px
+    border: 1px solid black;
     font-size: 30px;
     text-align: center;
+    padding: 20px;
+    margin:10px;
 }
 
 .image {
@@ -17,19 +17,22 @@
 }
 
 h1 {
-    color: white;
-    border: 1px solid #D6A800;
-    padding: 10px;
-    background-color: #060707;
+    color: rgb(17, 16, 16);
+    font-weight: 600;
+    font-size: 1.5 em;
     text-align: center;
 }
 
 h3 {
-    color: white;
-    border: 1px solid #D6A800;
+    display:inline-block;
+    color: rgba(20, 38, 35);
+    font-weight: 600;
+    font-size: .75em;
     padding: 10px;
-    background-color: #060707;
+    margin: 15px;
+    background-color: #ffffff;
     text-align: center;
+
 }
 
 figure {
@@ -37,8 +40,9 @@ figure {
 }
 
 figcaption {
-    font-style: italic;
     font-size: .75em;
+    font-style: italic;
+    color:rgba(74, 91, 112);
 }
 
 a {
@@ -46,7 +50,8 @@ a {
     font-size: 1.25em;
     color: #000000;
     text-decoration: none;
-    float: right;
+    padding: 20px;
+    float: left;
 }
 
 a:hover {
@@ -58,4 +63,3 @@ a:visited {
     color: #db1414;
     text-decoration: underline;
 }
-
