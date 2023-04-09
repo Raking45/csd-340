@@ -1,1 +1,17 @@
+#image-gallery {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+}
 
+.box {
+    background-color: white;
+    border: 5px solid black;
+    padding: -10px;
+    margin: 15px
+    font-size: 30px;
+    text-align: center;
+}
+
+.image {
+    width:  125px;
+}
