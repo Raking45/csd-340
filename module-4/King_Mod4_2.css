@@ -15,3 +15,47 @@
 .image {
     width:  125px;
 }
+
+h1 {
+    color: white;
+    border: 1px solid #D6A800;
+    padding: 10px;
+    background-color: #060707;
+    text-align: center;
+}
+
+h3 {
+    color: white;
+    border: 1px solid #D6A800;
+    padding: 10px;
+    background-color: #060707;
+    text-align: center;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 75em;
+}
+
+a {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #000000;
+    text-decoration: none;
+    float: right;
+}
+
+a:hover {
+    color: #0b0ead;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #db1414;
+    text-decoration: underline;
+}
+
