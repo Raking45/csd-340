@@ -9,17 +9,53 @@
     <meta name="robots" content="nofollow">
     <meta name="author" content="Robert King">                                                                      
    <link href="" type="text/css" rel="stylesheet">
+   <style>
+    h1 {
+        text-align: center;
+    }
+    .image {
+        width: 350px;
+        height: auto;
+        cursor: pointer;
+    }
+    div {
+        text-align: center;
+    }
+    </style>
+<script>
+    function changeImage(imageId) {
+            var image = document.getElementById(imageId);
+            var matchingImage = image.getAttribute('data-matching-image');
+
+            if (image.src.includes(matchingImage)) {
+                image.src = image.getAttribute('src');
+            } else {
+                image.src = matchingImage;
+            }
+        }
+</script>
+    
 </head>
 
 <body>
- 
     <h1>Assignment 10.3: JavaScript - Part 2</h1>
-       
-           
-                           
- <address><p><a href="http://www.bellevue.edu">Bellevue University</a></p>
-                    <p>1000 Gavin Road South</p>
-                    <p>Bellevue, Nebraska 68005</p></address>
+    <br />
+    <div>
+        <h4>Click on the image to witness a solar eclipse</h4>
+        <img id="image1" class="image" src="./images/sun.jpg" data-matching-image="./images/eclipse.jpg" onclick="changeImage('image1')" alt="Image 1">
+    </div>
+    <hr />
+    <br />
+    <div>
+        <h4>Click on the image to witness a lunar eclipse</h4>
+        <img id="image2" class="image" src="./images/moon.jpg" data-matching-image="./images/meclipse.jpg" onclick="changeImage('image2')" alt="Image 2">
+    </div>
+    <hr /> 
+    <div>                      
+        <address><p><a href="http://www.bellevue.edu">Bellevue University</a></p>
+        <p>1000 Gavin Road South</p>
+        <p>Bellevue, Nebraska 68005</p></address>
+    </div>
 </body>
 
 </html>
