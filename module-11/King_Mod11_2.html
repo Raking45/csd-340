@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Website Assignment 9.3">
+    <meta name="keywords" content="HTML, CSS, Assignment"> 
+    <meta name="robots" content="nofollow">
+    <meta name="author" content="Robert King">   
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+        var entries = [];
+
+        function addEntry() {
+            var input = document.getElementById('entry').value;
+            entries.push(input);
+            alert("Added: " + input + " at index " + entries.length);
+            document.getElementById('entry').value = '';
+        }
+
+        function deleteLastEntry() {
+            entries.pop();
+            alert("Last entry deleted.");
+        }
+
+        function displayEntries() {
+            var display = "";
+            for (var i = 0; i < entries.length; i++) {
+                display += (i + 1) + ". " + entries[i] + "<br>";
+            }
+            document.getElementById('displayArea').innerHTML = display;
+        }
+    </script>
+<style>
+* {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: rgb(250, 249, 249);
+    font-weight: 600;
+    font-size: 1.5 em;
+    text-align: center;
+}
+
+header {
+    border: 1px solid #D6A800;
+    padding: 20px;
+    background-color: #060707;
+    text-align: center;
+}
+
+input {
+    border-color:#060707;
+    padding-left: 55px;
+}
+
+button {
+    color:#f0f5f5;
+    font-size: 16px;
+    border-color:#060707;
+    background-color: #181716;
+    margin-left: 5pxpx
+}
+
+button:hover {
+    color:red;
+}
+
+footer {
+    background-color: #060707;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color:#ffffff;
+    font-weight: 400;
+    float: left;
+    padding-left: 25px;
+    font-style: italic;
+}
+
+footer a {
+    text-decoration: none;
+    color:#ffffff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color:crimson
+}
+
+</style>
+</head>
+<body>
+    <header>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    </header>
+    <hr>
+    <input type="text" id="entry">
+    <button onclick="addEntry()">Add New Entry</button>
+    <button onclick="deleteLastEntry()">Delete Last Entry</button>
+    <button onclick="displayEntries()">Display List</button>
+    <hr>
+    <div id="displayArea"></div>
+    <footer>
+        <p><a href="../index.html">Portal Page</a></p>
+      </footer>
+</body>
+</html>
 
