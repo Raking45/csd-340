@@ -1,0 +1,88 @@
+<!--Name: Robert King-->
+<!--Assignment Module 12.2-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description" content="Website Assignment 12.2">
+    <meta name="keywords" content="HTML, CSS, Assignment"> 
+    <meta name="robots" content="nofollow">
+    <meta name="author" content="Robert King">                                                                      
+   <link href="./King_Mod12_2.css" type="text/css" rel="stylesheet">
+   <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const bookList = document.querySelectorAll('.left ol li');
+      const booksArray = Array.from(bookList).map(book => book.textContent);
+
+      function displayAscendingOrder() {
+        const sortedArray = booksArray.slice().sort();
+        displayBooks(sortedArray);
+      }
+
+      function displayDescendingOrder() {
+        const sortedArray = booksArray.slice().sort().reverse();
+        displayBooks(sortedArray);
+      }
+
+      function displayBooks(books) {
+        const bookContainer = document.querySelector('.left ol');
+        bookContainer.innerHTML = '';
+
+        books.forEach(book => {
+          const bookElement = document.createElement('li');
+          bookElement.textContent = book;
+          bookContainer.appendChild(bookElement);
+        });
+      }
+
+      const topToBottomButton = document.createElement('button');
+      topToBottomButton.textContent = 'Top to Bottom';
+      topToBottomButton.addEventListener('click', displayAscendingOrder);
+
+      const bottomToTopButton = document.createElement('button');
+      bottomToTopButton.textContent = 'Bottom to Top';
+      bottomToTopButton.addEventListener('click', displayDescendingOrder);
+
+      const h3Element = document.querySelector('.left h3');
+      h3Element.insertAdjacentElement('afterend', topToBottomButton);
+      h3Element.insertAdjacentElement('afterend', bottomToTopButton);
+    });
+  </script>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+       <div class="left">
+        <h3>Top 10 Favorite Books</h3>
+        <ol>
+            <li>The Art of Invisibility by Kevin Mitnick</li>
+            <li>Hacking the Hacker by Roger A. Grimes</li>
+            <li>The Wheel of Time Series by Robert Jordan</li>
+            <li>The Riftwar Cycle by Raymond E. Feist</li>
+            <li>The Dragonlance Chronicles by Margaret Weis and Tracy Hickman</li>
+            <li>The Guardians of the Flame by Joel Rosenburg</li>
+            <li>Shannara Series by Terry Brooks</li>
+            <li>Sword of Truth Series by Terry Goodkind</li>
+            <li>Dragon Prince Trilogy by Melanie Rawn</li>
+            <li>Dragon Star Trilogy by Melanie Rawn</li>
+        </ol>
+       </div>
+       <div class="right">
+        <h3>5 Things I've Learned Since the Course Started</h3>
+        <ul>
+            <li>Proper HTML Formatting and Rules</li>
+            <li>Proper CSS Formatting and Rules</li>
+            <li>Page Layout and Design</li>
+            <li>User Reading Patterns and Memory</li>
+            <li>Simple Design Techniques are Key</li>
+        </ul>
+       </div>
+       <div class="bottom"><a href="../index.html">Back to Landing Page</a></div>
+                           
+  </div>
+  
+
+</body>
+
+</html>
